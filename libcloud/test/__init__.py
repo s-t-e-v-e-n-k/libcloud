@@ -97,6 +97,8 @@ class MockHttp(LibcloudConnection):
 
         (int status, str body, dict headers, str reason)
     """
+    # pytest may collect this class, and we don't need or want that
+    __test__ = False
 
     type = None
     use_param = None  # will use this param to namespace the request function
